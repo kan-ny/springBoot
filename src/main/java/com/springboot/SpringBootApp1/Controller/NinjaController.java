@@ -20,7 +20,7 @@ public class NinjaController {
     }
 
     // return JSON list to client
-    @GetMapping("ninjas")
+    @GetMapping("ninja/list")
     public List<Ninja> ninjas(){
         List<Ninja> n = new ArrayList<>();
         n.add(new Ninja(1, "Garra", "sand", "sandman"));
@@ -50,8 +50,6 @@ public class NinjaController {
     public Ninja ninjaQueryParam(@RequestParam int id, @RequestParam String fname, @RequestParam String village){
         return new Ninja(id, fname, village, "Genjutsus");
     }
-
-
 
 }
 
